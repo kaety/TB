@@ -17,7 +17,7 @@ public class TestUserCatalogue {
     
     @Test
     public void testAdd(){
-        IUserCatalogue uc = UserCatalogue.newInstance("tbok_pu");
+        IUserCatalogue uc = UserCatalogue.newInstance("tbook_pu");
         TBookUser u = new TBookUser("Loef","abc123","e@mail.com");
         uc.add(u);
     }

@@ -6,25 +6,29 @@ import java.util.logging.Logger;
 public enum TBook {
 
     INSTANCE;
-    /*private final IProductCatalogue productCatalogue = ProductCatalogue.newInstance("shop_pu");
-    private final ICustomerRegistry customerRegistry = CustomerRegistry.newInstance("shop_pu");
-    private final IOrderBook orderBook = OrderBook.newInstance("shop_pu");*/
+    private final IExerciseCatalogue exerciseCatalogue = ExerciseCatalogue.newInstance("tbook_pu");
+    private final IWorkoutCatalogue workoutCatalogue = WorkoutCatalogue.newInstance("tbook_pu");
+    private final IMessageCatalogue messageCatalogue = MessageCatalogue.newInstance("tbook_pu");
+    private final IUserCatalogue userCatalogue = UserCatalogue.newInstance("tbook_pu");
 
     private TBook() {
         Logger.getAnonymousLogger().log(Level.INFO, "TBook alive {0}", this.hashCode());
 
     }
-    /*
-    public ICustomerRegistry getCustomerRegistry() {
-        return customerRegistry;
-    }
 
-    public IOrderBook getOrderBook() {
-        return orderBook;
+    public IUserCatalogue getUserCatalogue() {
+        return userCatalogue;
     }
-
-    public IProductCatalogue getProductCatalogue() {
-        return productCatalogue;
+    
+    public IExerciseCatalogue getExerciseCatalogue() {
+        return exerciseCatalogue;
     }
-    * */
+    
+    public IWorkoutCatalogue getWorkoutCatalogue() {
+        return workoutCatalogue;
+    }
+    
+    public IMessageCatalogue getMessageCatalogue() {
+        return messageCatalogue;
+    }
 }
