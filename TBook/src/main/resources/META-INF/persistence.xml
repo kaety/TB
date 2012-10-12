@@ -4,8 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>edu.chl.tbook.Exercise</class>
     <class>edu.chl.tbook.TBookMessage</class>
-    <class>edu.chl.tbook.TBookSchema</class>
     <class>edu.chl.tbook.TBookUser</class>
+    <class>edu.chl.tbook.Workout</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/TbokDB"/>
       <property name="javax.persistence.jdbc.password" value="app"/>

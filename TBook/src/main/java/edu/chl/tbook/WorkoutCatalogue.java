@@ -4,7 +4,7 @@ package edu.chl.tbook;
 import java.util.*;
 import javax.persistence.*;
 
-public class WorkoutCatalogue extends AbstractDAO<Workout, String> implements IWorkoutCatalogue {
+public class WorkoutCatalogue extends AbstractDAO<Workout, Long> implements IWorkoutCatalogue {
 
     private WorkoutCatalogue(String puName) {
         super(Workout.class, puName);
