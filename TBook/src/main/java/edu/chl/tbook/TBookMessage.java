@@ -37,17 +37,27 @@ public class TBookMessage implements Serializable{
     }
     
     public TBookMessage(TBookUser from, TBookUser messageTo, String message){
+        this.fromUser = from;
+        this.toUser = messageTo;
+        this.text = message;
         Calendar cal = Calendar.getInstance();
         postTime = cal.getTimeInMillis();
     }
     
     public TBookMessage(TBookUser from, Workout commentTo, String message){
+        this.fromUser = from;
+        this.toWorkout = commentTo;
+        this.text = message;
         Calendar cal = Calendar.getInstance();
         postTime = cal.getTimeInMillis();
     }
 
     public TBookUser getFromUser() {
         return fromUser;
+    }
+    
+    public TBookUser getToUser() {
+        return toUser;
     }
 
     public void setFromUser(TBookUser fromUser) {

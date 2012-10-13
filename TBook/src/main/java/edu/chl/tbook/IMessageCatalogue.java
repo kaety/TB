@@ -4,10 +4,13 @@
  */
 package edu.chl.tbook;
 
+import java.util.List;
+
 /**
  *
  * @author Kristofer
  */
-interface IMessageCatalogue {
-    
+public interface IMessageCatalogue extends IDAO<TBookMessage, Long>{
+    public List<TBookMessage> getByReciever(TBookUser reciever);
+    public List<TBookMessage> getBySender(TBookUser sender);
 }

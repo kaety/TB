@@ -8,6 +8,6 @@ package edu.chl.tbook;
  *
  * @author Kristofer
  */
-interface IWorkoutCatalogue {
+public interface IWorkoutCatalogue extends IDAO<Workout, Long>{
     
 }

@@ -8,6 +8,6 @@ package edu.chl.tbook;
  *
  * @author Kristofer
  */
-interface IExerciseCatalogue {
+public interface IExerciseCatalogue extends IDAO<Exercise, String>{
     
 }
