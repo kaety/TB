@@ -18,16 +18,18 @@ public class Workout implements Serializable{
     public Workout() {
     }
 
-    public Workout(List<Exercise> ex, String name, Long workoutTime) {
+    public Workout(TBookUser owner, List<Exercise> ex, String name, Long workoutTime) {
         this.ex = ex;
         this.name = name;
         this.workoutTime = workoutTime;
+        this.owner = owner;
     }
 
-    public Workout(String name, Long workoutTime) {
+    public Workout(TBookUser owner, String name, Long workoutTime) {
         this.name = name;
         this.workoutTime = workoutTime;
         this.ex =new ArrayList<>();
+        this.owner = owner;
     }
 
     
@@ -56,5 +58,8 @@ public class Workout implements Serializable{
         this.ex = ex;
     }
     
+    public Long getId(){
+        return this.id;
+    }
     
 }

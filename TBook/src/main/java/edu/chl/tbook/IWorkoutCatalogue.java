@@ -4,10 +4,12 @@
  */
 package edu.chl.tbook;
 
+import java.util.List;
+
 /**
  *
  * @author Kristofer
  */
 public interface IWorkoutCatalogue extends IDAO<Workout, Long>{
-    
+    public List<Workout> getByOwner(TBookUser reciever);
 }
