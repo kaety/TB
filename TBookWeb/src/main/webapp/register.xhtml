@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./loginTemplate.xhtml">
+
+            <ui:define name="top">
+                Register FFS!!!!! YEAH!
+            </ui:define>
+
+            <ui:define name="left">
+                left
+            </ui:define>
+
+            <ui:define name="right">
+                right
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>Register new user</h1>
+                <h:form>
+                    <table border="0">
+                        <tr>
+                            <td>
+                            <h:outputLabel for="txtUName">Username</h:outputLabel>
+                            </td>
+                            <td>
+                            <h:inputText id="txtUName" value="#{register.uName}"  />
+                            <span class="message"><h:message for="txtUName" /></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h:outputLabel for="txtPasswd">Password</h:outputLabel>
+                            </td>
+                            <td>
+                            <h:inputSecret id="txtPasswd" value="#{register.passwd}"  />
+                            <span class="message"><h:message for="txtPasswd" /></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h:outputLabel for="txtEmail">email</h:outputLabel>
+                            </td>
+                            <td>
+                            <h:inputText id="txtEmail" value="#{register.email}"  />
+                            <span class="message"><h:message for="txtEmail" /></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h:outputLabel for="txtFName">First name</h:outputLabel>
+                            </td>
+                            <td>
+                            <h:inputText id="txtFName" value="#{register.fName}"  />
+                            <span class="message"><h:message for="txtFName" /></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h:outputLabel for="txtLName">Surname</h:outputLabel>
+                            </td>
+                            <td>
+                            <h:inputText id="txtLName" value="#{register.lName}"  />
+                            <span class="message"><h:message for="txtLName" /></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <h:commandButton value="Add" action="#{register.action}" />
+                </h:form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
