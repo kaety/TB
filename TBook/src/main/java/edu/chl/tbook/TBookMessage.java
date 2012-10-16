@@ -6,15 +6,12 @@ package edu.chl.tbook;
 
 import java.io.Serializable;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Random;
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
 
 /**
  *
@@ -26,7 +23,9 @@ public class TBookMessage implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @OneToOne(cascade=CascadeType.MERGE)
     private TBookUser fromUser = null;
+    @OneToOne(cascade=CascadeType.MERGE)
     private TBookUser toUser = null;
     private Workout toWorkout = null; //EXTRA GREJ
     private Long postTime;

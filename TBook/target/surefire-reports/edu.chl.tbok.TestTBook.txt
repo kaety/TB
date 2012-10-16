@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.chl.tbok.TestTBook
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.59 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.189 sec

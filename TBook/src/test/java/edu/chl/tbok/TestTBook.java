@@ -16,7 +16,7 @@ import org.junit.Test;
  */
 public class TestTBook {
     
-    String pu = "tbook_pu_test";
+    String pu = "tbook_pu";
     
     IUserCatalogue uc = UserCatalogue.newInstance(pu);
     IExerciseCatalogue ec = ExerciseCatalogue.newInstance(pu);
