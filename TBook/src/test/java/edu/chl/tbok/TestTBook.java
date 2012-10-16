@@ -4,7 +4,18 @@
  */
 package edu.chl.tbok;
 
-import edu.chl.tbook.*;
+import edu.chl.tbook.core.IUserCatalogue;
+import edu.chl.tbook.core.UserCatalogue;
+import edu.chl.tbook.core.ExerciseCatalogue;
+import edu.chl.tbook.core.IMessageCatalogue;
+import edu.chl.tbook.core.WorkoutCatalogue;
+import edu.chl.tbook.core.IWorkoutCatalogue;
+import edu.chl.tbook.core.TBookMessage;
+import edu.chl.tbook.core.Workout;
+import edu.chl.tbook.core.MessageCatalogue;
+import edu.chl.tbook.core.Exercise;
+import edu.chl.tbook.core.IExerciseCatalogue;
+import edu.chl.tbook.core.TBookUser;
 import java.util.Calendar;
 import java.util.List;
 import org.junit.Assert;
@@ -16,7 +27,7 @@ import org.junit.Test;
  */
 public class TestTBook {
     
-    String pu = "tbook_pu";
+    String pu = "tbook_pu_test";
     
     IUserCatalogue uc = UserCatalogue.newInstance(pu);
     IExerciseCatalogue ec = ExerciseCatalogue.newInstance(pu);
