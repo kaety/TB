@@ -16,7 +16,9 @@
         <div id="top" class="top">
             <ui:insert name="top">Top</ui:insert>
             <h:outputText value="Logged in as ${request.remoteUser}" />
-            
+            <h:form>
+            <h:commandButton action="#{auth.logout}" value="Logout" />
+            </h:form>
         </div>
 
         <div id="content" class="center_content">
