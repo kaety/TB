@@ -6,13 +6,13 @@ import javax.persistence.*;
 
 
 @Entity
-public class TBookUser implements Serializable {
+public class TBookUser extends Subject implements Serializable {
     
-    @Id
+ /*   @Id
     @Column(nullable=false)
     private String userName;
-    @Column(nullable=false)
-    private String passWord;
+    @Column(nullable=false) 
+    private String passWord; */
     private String fName,lName, eMail;
     
     public TBookUser(){
@@ -20,34 +20,38 @@ public class TBookUser implements Serializable {
     }
     
     public TBookUser(String userName, String passWord, String eMail){
-        this.userName = userName;
+        super(userName,passWord);
+      //  this.userName = userName;
         this.eMail = eMail;
-        this.passWord = passWord;
+      //  this.passWord = passWord;
+        addGroup(SubjectGroup.USER);
     }
     
     public TBookUser(String userName, String passWord, String eMail, String fName, String lName){
-        this.userName = userName;
+        super(userName,passWord);
+     //   this.userName = userName;
         this.eMail = eMail;
-        this.passWord = passWord;
+     //   this.passWord = passWord;
         this.fName = fName;
         this.lName = lName;
+        addGroup(SubjectGroup.USER);
     }
 
     public String getUserName() {
-        return userName;
+        return getLogin();
     }
 
-    public void setUserName(String userName) {
+  /*  public void setUserName(String userName) {
         this.userName = userName;
-    }
+    }*/
 
     public String getPassWord() {
-        return passWord;
+        return getPasswd();
     }
-
+/*
     public void setPassWord(String passWord) {
         this.passWord = passWord;
-    }
+    }*/
 
     public String getfName() {
         return fName;

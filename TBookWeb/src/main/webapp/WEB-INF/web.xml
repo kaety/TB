@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <!-- Must match name in GlassFish ??? -->
+        <realm-name>tbookrealm</realm-name>
+        <form-login-config>
+            <form-login-page>/login.xhtml</form-login-page>
+            <form-error-page>/loginfailed.xhtml</form-error-page>
+        </form-login-config>
+    </login-config> 
+    
+     <error-page>
+        <!-- Access denied (bad role response) -->
+        <error-code>403</error-code>
+        <location>/loginfailed.xhtml</location>
+    </error-page>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin</web-resource-name>
+            <url-pattern>/admins/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <!-- If auth used and roles accepted -->
+        <auth-constraint>
+            <!-- 
+                This is the role name in the application 
+                See glassfish-web.xml for mappings to realm roles
+            -->
+            <role-name>admin</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+   
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Tbookuser</web-resource-name>
+            <url-pattern>/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>tbookuser</role-name>
+            <!-- No SSL -->
+        </auth-constraint>
+    </security-constraint>
+    
+    
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
@@ -11,7 +63,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -19,6 +71,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>login.xhtml</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -6,6 +6,7 @@
     <class>edu.chl.tbook.TBookMessage</class>
     <class>edu.chl.tbook.TBookUser</class>
     <class>edu.chl.tbook.Workout</class>
+    <class>edu.chl.tbook.Subject</class>
     <properties>
       <property name="eclipselink.target-database" value="derby"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>

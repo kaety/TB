@@ -14,4 +14,9 @@ public final class UserCatalogue extends AbstractDAO<TBookUser, String> implemen
     public static UserCatalogue newInstance(String puName){
         return new UserCatalogue(puName);
     }   
+    
+    @Override
+    public void remove(String id){
+        System.out.println("Trying to remove user, not allowed!");
+    }
 }

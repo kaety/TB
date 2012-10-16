@@ -23,11 +23,11 @@ public class MessageCatalogue extends AbstractDAO<TBookMessage, Long> implements
         List<TBookMessage> messages = null;
         try {
             em = getEntityManager();
-            String query = "select m from TBookMessage m WHERE m.toUser.userName = '"+reciever.getUserName()+"'";
+            String query = "select m from TBookMessage m WHERE m.toUser.login = '"+reciever.getUserName()+"'";
             TypedQuery<TBookMessage> q = em.createQuery(query, TBookMessage.class);
             messages = q.getResultList();
         } catch (Exception ex) {
-            
+            ex.printStackTrace();
         } finally {
             if (em != null) {
                 em.close();
@@ -42,11 +42,11 @@ public class MessageCatalogue extends AbstractDAO<TBookMessage, Long> implements
         List<TBookMessage> messages = null;
         try {
             em = getEntityManager();
-            String query = "select m from TBookMessage m WHERE m.fromUser.userName = '"+sender.getUserName()+"'";
+            String query = "select m from TBookMessage m WHERE m.fromUser.login = '"+sender.getUserName()+"'";
             TypedQuery<TBookMessage> q = em.createQuery(query, TBookMessage.class);
             messages = q.getResultList();
         } catch (Exception ex) {
-            
+            ex.printStackTrace();
         } finally {
             if (em != null) {
                 em.close();

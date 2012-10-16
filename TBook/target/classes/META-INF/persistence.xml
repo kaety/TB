@@ -6,6 +6,7 @@
     <class>edu.chl.tbook.TBookMessage</class>
     <class>edu.chl.tbook.TBookUser</class>
     <class>edu.chl.tbook.Workout</class>
+    <class>edu.chl.tbook.Subject</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/TbokDB"/>
       <property name="javax.persistence.jdbc.password" value="app"/>

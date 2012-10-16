@@ -20,11 +20,11 @@ public class WorkoutCatalogue extends AbstractDAO<Workout, Long> implements IWor
         List<Workout> workouts = null;
         try {
             em = getEntityManager();
-            String query = "select w from Workout w WHERE w.owner.userName = '"+owner.getUserName()+"'";
+            String query = "select w from Workout w WHERE w.owner.login = '"+owner.getUserName()+"'";
             TypedQuery<Workout> q = em.createQuery(query, Workout.class);
             workouts = q.getResultList();
         } catch (Exception ex) {
-            
+            ex.printStackTrace();
         } finally {
             if (em != null) {
                 em.close();
