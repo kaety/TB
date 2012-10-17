@@ -13,7 +13,15 @@
             </ui:define>
 
             <ui:define name="content">
-                content
+              USER: <h:outputText value="${request.remoteUser}" />
+                <br/>
+                FÖRNAMN: <h:outputText value="${profile.fName}" />
+                <br/>
+                EFTERNAMN: <h:outputText value="${profile.lName}" />
+                <br/>
+                EMAIL: <h:outputText value="${profile.email}" />
+                <br/>
+                NAMN PÅ NÄSTA ÖVN: <h:outputText value="${profile.name}" />
             </ui:define>
 
         </ui:composition>

@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-2012-10-16 11:15:28.813 GMT:
- Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.1.0 - (938214): instance a816c00e-013a-6949-1551-000005265ee0 
-on database directory /chalmers/users/klokkan/TB/TBook/tmp   with class loader sun.misc.Launcher$AppClassLoader@42b36022
+2012-10-17 16:36:55.571 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.1.0 - (938214): instance a816c00e-013a-6f95-bdd6-0000022b3c38 
+on database directory C:\Users\Kristofer\Desktop\grg\TB\TBook\tmp   with class loader sun.misc.Launcher$AppClassLoader@1e4ad14c
 
 Database Class Loader started - derby.database.classpath=''
