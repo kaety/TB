@@ -8,29 +8,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="/TBookWeb/resources/css/default.css" rel="stylesheet" type="text/css" />
         <link href="/TBookWeb/resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+<<<<<<< HEAD
         <title>Facelets Template</title>
+=======
+		<link href="/TBookWeb/css/styles.css" rel="stylesheet" type="text/css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+		<script src="js/twitter.js"></script>
+        <title>Tr&auml;ningsBoken</title>
+>>>>>>> 7f1f46bf77c578aa42c91439b8e36bf13d480cd6
     </h:head>
 
     <h:body>
-
-        <div id="top">
-            <ui:insert name="top">Top</ui:insert>
-        </div>
-        <div>
-            <div id="left">
-                <ui:insert name="left">Left</ui:insert>
-            </div>
-            <div>
-                <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
-                </div>
-                <div id="content" class="right_content">
-                    <ui:insert name="content">Content</ui:insert>
-                </div>
-            </div>
-        </div>
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
+        <div id="container">
+            <div id="header">Tr&auml;ningsBoken</div>
+			<div id="leftCol">
+                            <ui:insert name="left">Left</ui:insert>
+			</div>
+			
+			
+			<div id="middleCol">
+                            <ui:insert name="content">Content</ui:insert>
+			</div>
+			
+			<div id="rightCol">
+                                <h3>Twitter feed</h3>
+				<div id="jstwitter">
+				</div>
+			</div>
+			
+			<div id="footer">Copyright &copy; blahablaha.com</div>
         </div>
 
     </h:body>

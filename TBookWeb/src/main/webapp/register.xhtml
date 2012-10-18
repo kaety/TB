@@ -9,70 +9,85 @@
         <ui:composition template="./loginTemplate.xhtml">
 
             <ui:define name="top">
-                Register FFS!!!!! YEAH!
+                
             </ui:define>
 
             <ui:define name="left">
-                left
+                
             </ui:define>
 
             <ui:define name="right">
-                right
+                
             </ui:define>
 
             <ui:define name="content">
-                <h1>Register new user</h1>
+                <div id="loginBox">
                 <h:form>
                     <table border="0">
                         <tr>
+                            <td colspan="2" class="regText">
+                            <h3>Registrering</h3>
+                            </td>
                             <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formLabel">
                             <h:outputLabel for="txtUName">Username</h:outputLabel>
                             </td>
                             <td>
-                            <h:inputText id="txtUName" value="#{register.uName}"  />
+                            <h:inputText class="formInput" id="txtUName" value="#{register.uName}"  />
                             <span class="message"><h:message for="txtUName" /></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="formLabel">
                             <h:outputLabel for="txtPasswd">Password</h:outputLabel>
                             </td>
                             <td>
-                            <h:inputSecret id="txtPasswd" value="#{register.passwd}"  />
+                            <h:inputSecret class="formInput" id="txtPasswd" value="#{register.passwd}"  />
                             <span class="message"><h:message for="txtPasswd" /></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="formLabel">
                             <h:outputLabel for="txtEmail">email</h:outputLabel>
                             </td>
                             <td>
-                            <h:inputText id="txtEmail" value="#{register.email}"  />
+                            <h:inputText class="formInput" id="txtEmail" value="#{register.email}"  />
                             <span class="message"><h:message for="txtEmail" /></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="formLabel">
                             <h:outputLabel for="txtFName">First name</h:outputLabel>
                             </td>
                             <td>
-                            <h:inputText id="txtFName" value="#{register.fName}"  />
+                            <h:inputText class="formInput" id="txtFName" value="#{register.fName}"  />
                             <span class="message"><h:message for="txtFName" /></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="formLabel">
                             <h:outputLabel for="txtLName">Surname</h:outputLabel>
                             </td>
                             <td>
-                            <h:inputText id="txtLName" value="#{register.lName}"  />
+                            <h:inputText class="formInput" id="txtLName" value="#{register.lName}"  />
                             <span class="message"><h:message for="txtLName" /></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="regText">
+                            <h:commandButton value="Registrera" action="#{register.action}" />
+                            </td>
+                            <td>
                             </td>
                         </tr>
                     </table>
                     <br />
-                    <h:commandButton value="Add" action="#{register.action}" />
+                    
                 </h:form>
+                </div>
             </ui:define>
 
             <ui:define name="bottom">

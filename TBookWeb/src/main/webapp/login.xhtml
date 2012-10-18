@@ -14,7 +14,7 @@
             </ui:define>
 
             <ui:define name="left">
-                left
+                
             </ui:define>
 
             <ui:define name="right">
@@ -22,18 +22,27 @@
             </ui:define>
 
             <ui:define name="content">
-                <form action="j_security_check" method="post">
-            <strong>Username: </strong>
-            <input type="text" name="j_username" size="25"/>
-            <br/>
-                <strong> Password: </strong>
-                <input type="password" size="25" name="j_password"/>
-                <br/>
-                <input type="submit" value="Submit"/>
-                <input type="reset" value="Reset"/>
+                <div id="loginBox">
+                    <form action="j_security_check" method="post">
+                        <table>
+                                <tr>
+                                        <td class="formLabel">Namn</td><td><input id="usernameInput" type="text" name="j_username" size="25"/><br /></td>
+                                </tr>
+                                <tr>
+                                        <td class="formLabel">L&ouml;sen</td><td><input id="passwordInput" type="password" size="25" name="j_password"/></td>
+                                </tr>
+                                <tr>
+                                        <td class="regText" colspan="2"><input type="submit" value="Logga in"/></td>
+                                </tr>
+                            
+                                <tr>
+                                        <td class="regText" colspan="2">Har du inget konto? <a href="register.xhtml">Registrera dig nu</a>!</td>
+                                </tr>
+                        </table>
+                    </form>
+                </div>
                 
-                </form>
-                <a href="register.xhtml">Register</a>
+                
             </ui:define>
 
             <ui:define name="bottom">
