@@ -99,8 +99,8 @@ public class TestTBook {
         uc.add(u5);
         efs = ec.getAll();
         efs.remove(2);
-        Workout w1 = new Workout(u5,efs,"eftermiddagspass",Calendar.getInstance().getTimeInMillis());
-        Workout w2 = new Workout(u5,efs,"eftermiddagspass",Calendar.getInstance().getTimeInMillis());
+        Workout w1 = new Workout(u5,efs,"eftermiddagspass",Calendar.getInstance().getTimeInMillis()+1350551775);
+        Workout w2 = new Workout(u5,efs,"eftermiddagspass",Calendar.getInstance().getTimeInMillis()+1350551775);
         wc.add(w1);
         wc.add(w2);
         List<Workout> wf = wc.getByOwner(u5);

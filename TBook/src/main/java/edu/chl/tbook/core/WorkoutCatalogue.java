@@ -35,7 +35,7 @@ public class WorkoutCatalogue extends AbstractDAO<Workout, Long> implements IWor
     
     @Override
     public Workout ownersNextWorkout(TBookUser owner){
-       ArrayList<Workout> wo = (ArrayList) getByOwner(owner);
+       List<Workout> wo = getByOwner(owner);
        Collections.sort(wo, new WorkOutTimeComparator());
        
        if (wo.isEmpty()){
