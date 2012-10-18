@@ -92,7 +92,7 @@ public class TestTBook {
         ec.add(e1);
         ec.add(e2);
         ec.add(e3);
-        Exercise ef = ec.find(e1.geteName());
+        Exercise ef = ec.find(e1.getEname());
         List<Exercise> efs = ec.getAll();
         Assert.assertTrue(efs.size() == 3 && ef.getDescription().equals(e1.getDescription()));
         

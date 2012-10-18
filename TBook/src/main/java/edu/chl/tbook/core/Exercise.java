@@ -7,25 +7,25 @@ import javax.persistence.*;
 public class Exercise implements Serializable{
     
     @Id
-    private String eName;
+    private String ename;
     private String picture;
     private String description;
 
     public Exercise() {
     }
 
-    public Exercise(String eName, String picture, String description) {
-        this.eName = eName;
+    public Exercise(String ename, String picture, String description) {
+        this.ename = ename;
         this.picture = picture;
         this.description = description;
     }
 
-    public String geteName() {
-        return eName;
+    public String getEname() {
+        return ename;
     }
 
-    public void seteName(String eName) {
-        this.eName = eName;
+    public void setEname(String eName) {
+        this.ename = eName;
     }
 
     public String getPicture() {
