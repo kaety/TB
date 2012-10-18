@@ -8,23 +8,31 @@
         <ui:composition template="./loginTemplate.xhtml">
 
             <ui:define name="top">
-                top
+                
             </ui:define>
 
             <ui:define name="left">
-                left
+                
             </ui:define>
 
             <ui:define name="right">
-                right
+                
             </ui:define>
 
             <ui:define name="content">
-                Login failed!
+                <div id="loginBox">
+                    <form action="j_security_check" method="post">
+                        <table>
+                                <tr>
+                                        <td class="regText" colspan="2">Inloggningen misslyckades!<br /><br /><a href="login.xhtml">Tillbaka</a></td>
+                                </tr>
+                        </table>
+                    </form>
+                </div>
             </ui:define>
 
             <ui:define name="bottom">
-                bottom
+                
             </ui:define>
 
         </ui:composition>
