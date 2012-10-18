@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="left">
+                
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="form">  
+  
+        <p:dataGrid var="e" value="#{exercises.exes}" columns="3"  
+        rows="12" paginator="true"  
+        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+        rowsPerPageTemplate="9,12,15">  
+            
+        <p:panel header="#{e.ename}" style="text-align:center">  
+            <h:panelGrid columns="1" style="width:100%">  
+                <p:graphicImage height="100" width="100" value="#{e.picture}"/>   
+  
+                <h:outputText value="#{e.description}" />  
+  
+                <p:commandLink update=":form:exDetail" oncomplete="exDialog.show()" title="View Detail">  
+                    <h:outputText styleClass="ui-icon ui-icon-search" style="margin:0 auto;" />   
+                    <f:setPropertyActionListener value="#{e}"   
+                            target="#{exercises.selected}" />  
+                </p:commandLink>  
+            </h:panelGrid>  
+        </p:panel>  
+                   
+    </p:dataGrid>  
+      
+    <p:dialog header="DETALJER" widgetVar="exDialog" modal="true">  
+        <p:outputPanel id="exDetail" style="text-align:center;" layout="block">  
+          
+            <p:graphicImage value="#{exercises.selected.picture}"/>  
+              
+            <h:panelGrid  columns="2" cellpadding="5">  
+               <h:outputLabel for="name" value="Namn: " />  
+                <h:outputText id="name" value="#{exercises.selected.ename}" />    
+                  
+                <h:outputLabel for="desc" value="Beskrivning: " />  
+                <h:outputText id="desc" value="#{exercises.selected.description}" />  
+                 
+            </h:panelGrid>  
+        </p:outputPanel>  
+    </p:dialog>  
+  
+</h:form> 
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

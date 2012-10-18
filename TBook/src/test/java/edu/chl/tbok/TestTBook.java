@@ -86,9 +86,9 @@ public class TestTBook {
     
     @Test
     public void testAddFindExerciseAndWorkout(){
-        Exercise e1 = new Exercise("Skatan","","Vifta med armarna");
-        Exercise e2 = new Exercise("Fisk på land","","Ligg ner och sprattla runt");
-        Exercise e3 = new Exercise("Test1","","Gör vad du vill");
+        Exercise e1 = new Exercise("Skatan","http://sverigesradio.se/diverse/appdata/isidor/images/news_images/3275/632513_366_248.jpg","Vifta med armarna");
+        Exercise e2 = new Exercise("Fisk på land","http://assets.nydailynews.com/polopoly_fs/1.468657!/img/httpImage/image.jpg","Ligg ner och sprattla runt");
+        Exercise e3 = new Exercise("Test1","http://wac.450f.edgecastcdn.net/80450F/therockstation99x.com/files/2012/06/sex.jpg","Gör vad du vill");
         ec.add(e1);
         ec.add(e2);
         ec.add(e3);
