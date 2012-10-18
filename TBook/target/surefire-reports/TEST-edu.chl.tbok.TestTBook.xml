@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="8.804" errors="0" skipped="0" tests="3" name="edu.chl.tbok.TestTBook">
+<testsuite failures="0" time="5.098" errors="0" skipped="0" tests="3" name="edu.chl.tbok.TestTBook">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/nfs4/sol.ita.chalmers.se/ufs/misc/linuxsw/sup64/jdk-1.7.0_03/jre/lib/amd64"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/chalmers/users/tapperk/TB/TBook"/>
+    <property name="user.dir" value="/chalmers/users/klokkan/TB/TBook"/>
     <property name="java.runtime.version" value="1.7.0_03-b04"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/nfs4/sol.ita.chalmers.se/ufs/misc/linuxsw/sup64/jdk-1.7.0_03/jre/lib/endorsed"/>
@@ -30,13 +30,13 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="2.6.32-279.2.1.el6.x86_64"/>
-    <property name="user.home" value="/chalmers/users/tapperk"/>
+    <property name="os.version" value="2.6.32-279.5.2.el6.x86_64"/>
+    <property name="user.home" value="/chalmers/users/klokkan"/>
     <property name="user.timezone" value="Europe/Stockholm"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="1.7"/>
-    <property name="user.name" value="tapperk"/>
+    <property name="user.name" value="klokkan"/>
     <property name="java.class.path" value="/chalmers/groups/ws-devel/netbeans-7.2/java/maven/boot/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
@@ -59,7 +59,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="8.309" classname="edu.chl.tbok.TestTBook" name="testAddFindMessage"/>
+  <testcase time="4.318" classname="edu.chl.tbok.TestTBook" name="testAddFindUser"/>
+  <testcase time="0.419" classname="edu.chl.tbok.TestTBook" name="testAddFindMessage"/>
   <testcase time="0.302" classname="edu.chl.tbok.TestTBook" name="testAddFindExerciseAndWorkout"/>
-  <testcase time="0.146" classname="edu.chl.tbok.TestTBook" name="testAddFindUser"/>
 </testsuite>
