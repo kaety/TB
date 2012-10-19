@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="top">   
+
+            </ui:define>
+
+            <ui:define name="left">
+
+            </ui:define>
+
+            <ui:define name="right">
+
+            </ui:define>
+
+            <ui:define name="content">
+                <div id="loginBox">
+                    <h:form>
+                        <table border="0">
+                            <tr>
+                                <td colspan="2" class="regText">
+                                    <h3>Settings</h3>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="formLabel">
+                                    <h:outputLabel  for="txtPasswd">Password</h:outputLabel>
+                                </td>
+                                <td>
+                                    <h:inputSecret class="formInput" id="txtPasswd" value="#{settings.passwd}"  />
+                                    <span class="message"><h:message for="txtPasswd" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="formLabel">
+                                    <h:outputLabel for="txtEmail">email</h:outputLabel>
+                                </td>
+                                <td>
+                                    <h:inputText class="formInput" id="txtEmail" value="#{settings.email}"  />
+                                    <span class="message"><h:message for="txtEmail" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="formLabel">
+                                    <h:outputLabel for="txtFName">First name</h:outputLabel>
+                                </td>
+                                <td>
+                                    <h:inputText class="formInput" id="txtFName" value="#{settings.fName}"  />
+                                    <span class="message"><h:message for="txtFName" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="formLabel">
+                                    <h:outputLabel for="txtLName">Surname</h:outputLabel>
+                                </td>
+                                <td>
+                                    <h:inputText class="formInput" id="txtLName" value="#{settings.lName}"  />
+                                    <span class="message"><h:message for="txtLName" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td colspan="2" class="regText">
+                            <h:commandButton value="Save" action="#{settings.action}" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        </table>
+                    </h:form>
+                </div>
+            </ui:define>
+
+            <ui:define name="bottom">
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
