@@ -27,7 +27,7 @@ import org.junit.Test;
  */
 public class TestTBook {
 
-    String pu = "tbook_pu_test";
+    String pu = "tbook_pu";
     IUserCatalogue uc = UserCatalogue.newInstance(pu);
     IExerciseCatalogue ec = ExerciseCatalogue.newInstance(pu);
     IWorkoutCatalogue wc = WorkoutCatalogue.newInstance(pu);
@@ -133,7 +133,9 @@ public class TestTBook {
         List<Workout> wf = wc.getByOwner(u5);
         wc.remove(w1.getId());
         efs = ec.getAll();
-        Assert.assertTrue(wf.size() == 2 && efs.size() == 3);
+        System.out.println(wf.size());
+        System.out.println(efs.size());
+        Assert.assertTrue(wf.size() == 2 && efs.size() == 19);
         uc.remove(u5.getLogin());
     }
 }

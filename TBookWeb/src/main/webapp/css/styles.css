@@ -68,6 +68,25 @@ body
 	font-family: tahoma;
 }
 
+#messageBox {
+	width: 460px;
+        padding: 20px;
+	border: 1px solid #ddd;
+	margin: 0px auto;
+	box-shadow: inset 0px 0px 20px #f7f7f7;
+	font-family: tahoma;
+        text-align: left;
+}
+
+#messageBox .messageText {
+	width: 440px;
+        padding: 5px;
+	border: 1px solid #ddd;
+	margin: 0px auto;
+	box-shadow: inset 0px 0px 20px #f7f7f7;
+	font-family: tahoma;
+}
+
 .formLabel {
 	text-align: right;
 }

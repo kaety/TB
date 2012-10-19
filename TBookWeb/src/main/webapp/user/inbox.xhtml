@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="left">
+                
+            </ui:define>
+
+            <ui:define name="content">
+                <h:dataTable value="#{messages.inbox}" var="m"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+ 
+    			<h:column>
+                        	#{m.fromUser.userName}
+    			</h:column>
+    			<h:column>
+    				#{m.text.subSequence(0, (m.text.length() > 20 ? 30 : m.text.length()))}
+    			</h:column>
+ 
+    		</h:dataTable>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
