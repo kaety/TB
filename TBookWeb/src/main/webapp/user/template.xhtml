@@ -16,39 +16,57 @@
 
     <h:body>
         <div id="container">
-            <div id="header">Tr&auml;ningsBoken</div>
-			<div id="leftCol">
-                            <div class="userInfo">
-                                <ui:insert name="left"></ui:insert>
-                                Inloggad som <strong><h:outputText value="${request.remoteUser}" /></strong>
-                                <br/>
-                                <br/>
-                                Förnamn: <h:outputText value="${profile.fname}"/>
-                                <br/>
-                                Efternamn: <h:outputText value="${profile.lname}" />
-                                <br/>
-                                Email: <h:outputText value="${profile.email}" />
-                                <br/>
-                                N&auml;sta &ouml;vning: <h:outputText value="${profile.won}" />
-                                <br/>
-                                <br/>
-                                <h:form>
-                                <h:commandButton action="#{auth.logout}" value="Logout" />
-                                </h:form>
-                            </div>
-			</div>
-			
-			
-			<div id="middleCol">
-                            <ui:insert name="content"></ui:insert>
-			</div>
-			
-			<div id="rightCol">
-				<div id="jstwitter">
-				</div>
-			</div>
-			
-			<div id="footer">Copyright &copy; blahablaha.com</div>
+            <div id="header">Tr&auml;ningsBoken
+            
+                <div id='cssmenu'>
+                    <ul>
+                       <li class='active '><a href='index.xhtml'><span>Home</span></a></li>
+                       <li class='has-sub '><a href='#'><span>Products</span></a>
+                          <ul>
+                             <li><a href='#'><span>Product 1</span></a></li>
+                             <li><a href='#'><span>Product 2</span></a></li>
+                          </ul>
+                       </li>
+                       <li><a href='#'><span>About</span></a></li>
+                       <li><a href='#'><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            
+            </div>
+            
+            
+            <div id="leftCol">
+                <div class="userInfo">
+                    <ui:insert name="left"></ui:insert>
+                    Inloggad som <strong><h:outputText value="${request.remoteUser}" /></strong>
+                    <br/>
+                    <br/>
+                    Förnamn: <h:outputText value="${profile.fname}"/>
+                    <br/>
+                    Efternamn: <h:outputText value="${profile.lname}" />
+                    <br/>
+                    Email: <h:outputText value="${profile.email}" />
+                    <br/>
+                    N&auml;sta &ouml;vning: <h:outputText value="${profile.won}" />
+                    <br/>
+                    <br/>
+                    <h:form>
+                    <h:commandButton action="#{auth.logout}" value="Logout" />
+                    </h:form>
+                </div>
+            </div>
+
+
+            <div id="middleCol">
+                <ui:insert name="content"></ui:insert>
+            </div>
+
+            <div id="rightCol">
+                    <div id="jstwitter">
+                    </div>
+            </div>
+
+            <div id="footer">Copyright &copy; blahablaha.com</div>
         </div>
 
     </h:body>
