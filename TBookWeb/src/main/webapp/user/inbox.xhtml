@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <body>
 
@@ -14,16 +15,22 @@
 
             <ui:define name="content">
                 <h:dataTable value="#{messages.inbox}" var="m"
-    			styleClass="order-table"
-    			headerClass="order-table-header"
-    			rowClasses="order-table-odd-row,order-table-even-row"
+    			styleClass="inboxtable"
+    			headerClass=""
+    			rowClasses="inboxtable-odd-row,inboxtable-even-row"
     		>
  
     			<h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Från" />
+                                </f:facet>
                         	#{m.fromUser.userName}
     			</h:column>
     			<h:column>
-    				#{m.text.subSequence(0, (m.text.length() > 20 ? 30 : m.text.length()))}
+                                <f:facet name="header">
+                                    <h:outputText value="Meddelande" />
+                                </f:facet>
+                                <a href="viewmessage.xhtml?id=#{m.id}">#{m.text.subSequence(0, (m.text.length() > 20 ? 30 : m.text.length()))}</a>
     			</h:column>
  
     		</h:dataTable>
