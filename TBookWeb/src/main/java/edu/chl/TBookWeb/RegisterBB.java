@@ -78,5 +78,7 @@ public class RegisterBB implements Serializable{
         Logger.getAnonymousLogger().log(Level.INFO, "added user {0}", u);
         return "login?faces-redirect=true";  // Where to go, navigate 
     }
-    
+    public String cancel(){
+        return "login?faces-redirect=true"; 
+    }
 }
