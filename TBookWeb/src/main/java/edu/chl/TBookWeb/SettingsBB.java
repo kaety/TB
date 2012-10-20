@@ -60,9 +60,6 @@ public class SettingsBB implements Serializable {
     }
 
     public String action() {
-        if(passwd.equals("")){
-            return "settings?faces-redirect=true";
-        }
         TBookUser u = new TBookUser(request.getRemoteUser(), passwd, email, fName, lName);
         userCat.update(u);
         passwd = "";

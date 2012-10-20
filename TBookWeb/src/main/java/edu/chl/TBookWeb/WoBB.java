@@ -46,4 +46,8 @@ public class WoBB implements Serializable{
        
     }
     
+    
+   public String add(){
+       return "addworkout?faces-redirect=true";  // Where to go, navigate 
+   }
 }

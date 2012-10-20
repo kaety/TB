@@ -36,7 +36,8 @@
                                     <h:outputLabel for="txtUName">Username</h:outputLabel>
                                 </td>
                                 <td>
-                                    <h:inputText class="formInput" id="txtUName" value="#{register.uName}"  />
+                                    <h:inputText class="formInput" id="txtUName" value="#{register.uName}" required="true"
+                                                 requiredMessage="Value is required"/>
                                     <span class="message"><h:message for="txtUName" /></span>
                                 </td>
                             </tr>
@@ -45,7 +46,8 @@
                                     <h:outputLabel for="txtPasswd">Password</h:outputLabel>
                                 </td>
                                 <td>
-                                    <h:inputSecret class="formInput" id="txtPasswd" value="#{register.passwd}"  />
+                                    <h:inputSecret class="formInput" id="txtPasswd" value="#{register.passwd}" required="true"
+                                                 requiredMessage="Value is required" />
                                     <span class="message"><h:message for="txtPasswd" /></span>
                                 </td>
                             </tr>
