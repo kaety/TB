@@ -79,6 +79,9 @@ public class TBookMessage implements Serializable{
         this.text = text;
     }
     
+    public Long getId(){
+        return id;
+    }
     
     
 }

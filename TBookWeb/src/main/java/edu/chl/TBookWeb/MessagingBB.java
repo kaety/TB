@@ -55,6 +55,15 @@ public class MessagingBB implements Serializable{
         return messageCat.getBySender(userCat.find(user));
     }
     
+    public TBookMessage getMessage(Long id){
+        TBookMessage m = messageCat.find(id);
+        String user = FacesContext.getCurrentInstance().getExternalContext().getRemoteUser();
+        if (m.getFromUser().getLogin().equals(user) || m.getToUser().getLogin().equals(user)){
+            return m;
+        }
+        return new TBookMessage();
+    }
+    
     public String send() {    
         String user = FacesContext.getCurrentInstance().getExternalContext().getRemoteUser();
         TBookUser toUser = userCat.find(to);

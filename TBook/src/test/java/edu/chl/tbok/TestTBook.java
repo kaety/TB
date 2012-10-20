@@ -27,7 +27,7 @@ import org.junit.Test;
  */
 public class TestTBook {
 
-    String pu = "tbook_pu";
+    String pu = "tbook_pu_test";
     IUserCatalogue uc = UserCatalogue.newInstance(pu);
     IExerciseCatalogue ec = ExerciseCatalogue.newInstance(pu);
     IWorkoutCatalogue wc = WorkoutCatalogue.newInstance(pu);
@@ -73,7 +73,7 @@ public class TestTBook {
         for (TBookMessage m : mf) {
             System.out.println("From: " + m.getFromUser().getUserName() + " To:" + m.getToUser().getUserName() + " Message:" + m.getText());
         }
-
+        System.out.println(mf.size());
         Assert.assertTrue(mf.size() == 1);
         uc.remove(u3.getLogin());
         uc.remove(u4.getLogin());
