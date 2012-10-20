@@ -17,10 +17,8 @@
             <ui:define name="content">
                 <h:form id="form">  
   
-        <p:dataGrid var="e" value="#{exercises.exes}" columns="3"  
-        rows="12" paginator="true"  
-        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
-        rowsPerPageTemplate="9,12,15">  
+        <p:dataGrid var="e" value="#{exercises.exes}" columns="3">     
+         
             
         <p:panel header="#{e.ename}" style="text-align:center">  
             <h:panelGrid columns="1" style="width:100%">  

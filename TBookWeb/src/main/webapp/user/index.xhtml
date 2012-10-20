@@ -13,18 +13,9 @@
             </ui:define>
 
             <ui:define name="content">
-              USER: <h:outputText value="${request.remoteUser}" />
-              
+                <font size="4"><strong>Next Workout: </strong><h:outputText value="${profile.won}" /></font>
                 <br/>
-                FÖRNAMN: <h:outputText value="${profile.fname}"/>
-                <br/>
-                EFTERNAMN: <h:outputText value="${profile.lname}" />
-                <br/>
-                EMAIL: <h:outputText value="${profile.email}" />
-                <br/>
-                NÄSTA ÖVNING: <h:outputText value="${profile.won}" />
-                <br/>
-                ÖVNINGAR NÄSTA PASS: 
+                <font size="3"><strong>Exercises: </strong></font>
                 <h:dataTable value="#{profile.exes}" var="e"
     			styleClass="order-table"
     			headerClass="order-table-header"

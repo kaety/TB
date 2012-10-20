@@ -17,46 +17,45 @@
     <h:body>
         <div id="container">
             <div id="header">Tr&auml;ningsBoken
-            
+
                 <div id='cssmenu'>
                     <ul>
-                       <li class='active '><a href='index.xhtml'><span>Hem</span></a></li>
-                       <li class='has-sub '><a href='#'><span>Products</span></a>
-                          <ul>
-                             <li><a href='#'><span>Product 1</span></a></li>
-                             <li><a href='#'><span>Product 2</span></a></li>
-                          </ul>
-                       </li>
-                       <li class='has-sub '><a href='inbox.xhtml'><span>Meddelanden</span></a>
-                          <ul>
-                             <li><a href='sendmessage.xhtml'><span>Skriv nytt</span></a></li>
-                             <li><a href='inbox.xhtml'><span>Inbox</span></a></li>
-                             <li><a href='outbox.xhtml'><span>Skickat</span></a></li>
-                          </ul>
-                       </li>
+                        <li class='active '><a href='index.xhtml'><span>Home</span></a></li>
+                        <li class='has-sub '><a href='#'><span>Workouts</span></a>
+                            <ul>
+                                <li><a href='workouts.xhtml'><span>Show Workouts</span></a></li>
+                                <li><a href='addworkout.xhtml'><span>Add Workout</span></a></li>
+                            </ul>
+                        </li>
+                        <li class='active'><a href='exercises.xhtml'><span>Exercises</span></a></li>
+                        <li class='has-sub '><a href='inbox.xhtml'><span>Messages</span></a>
+                            <ul>
+                                <li><a href='sendmessage.xhtml'><span>New Message</span></a></li>
+                                <li><a href='inbox.xhtml'><span>Inbox</span></a></li>
+                                <li><a href='outbox.xhtml'><span>Sent</span></a></li>
+                            </ul>
+                        </li>
+                        <li class='active'><a href='settings.xhtml'><span>Settings</span></a></li>
                     </ul>
                 </div>
-            
+
             </div>
-            
-            
+
+
             <div id="leftCol">
                 <div class="userInfo">
                     <ui:insert name="left"></ui:insert>
-                    Inloggad som <strong><h:outputText value="${request.remoteUser}" /></strong>
+                    Logged in as: <strong><h:outputText value="${request.remoteUser}" /></strong>
                     <br/>
                     <br/>
-                    Förnamn: <h:outputText value="${profile.fname}"/>
+                    <strong>Name: </strong><h:outputText value="${profile.fname}"/>
                     <br/>
-                    Efternamn: <h:outputText value="${profile.lname}" />
+                    <strong>Surname: </strong><h:outputText value="${profile.lname}" />
                     <br/>
-                    Email: <h:outputText value="${profile.email}" />
-                    <br/>
-                    N&auml;sta &ouml;vning: <h:outputText value="${profile.won}" />
-                    <br/>
+                    <strong>Email: </strong><h:outputText value="${profile.email}" />
                     <br/>
                     <h:form>
-                    <h:commandButton action="#{auth.logout}" value="Logout" />
+                        <h:commandButton action="#{auth.logout}" value="Logout" />
                     </h:form>
                 </div>
             </div>
@@ -67,8 +66,8 @@
             </div>
 
             <div id="rightCol">
-                    <div id="jstwitter">
-                    </div>
+                <div id="jstwitter">
+                </div>
             </div>
 
             <div id="footer">Copyright &copy; blahablaha.com</div>

@@ -21,10 +21,11 @@ public class SettingsBB implements Serializable {
     private IUserCatalogue userCat = TBook.INSTANCE.getUserCatalogue();
     FacesContext context = FacesContext.getCurrentInstance();
     HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
-    private String fName = "";
-    private String lName = "";
-    private String passwd = "";
-    private String email = "";
+    private TBookUser t = userCat.find(request.getRemoteUser());
+    private String fName = t.getfName();
+    private String lName = t.getlName();
+    private String passwd = t.getPassWord();
+    private String email = t.geteMail();
 
     public String getfName() {
         return fName;
@@ -59,6 +60,9 @@ public class SettingsBB implements Serializable {
     }
 
     public String action() {
+        if(passwd.equals("")){
+            return "settings?faces-redirect=true";
+        }
         TBookUser u = new TBookUser(request.getRemoteUser(), passwd, email, fName, lName);
         userCat.update(u);
         passwd = "";
