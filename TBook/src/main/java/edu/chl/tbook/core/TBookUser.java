@@ -8,11 +8,7 @@ import javax.persistence.*;
 @Entity
 public class TBookUser extends Subject implements Serializable {
     
- /*   @Id
-    @Column(nullable=false)
-    private String userName;
-    @Column(nullable=false) 
-    private String passWord; */
+ 
     private String fName,lName, eMail;
     
     public TBookUser(){
@@ -21,17 +17,13 @@ public class TBookUser extends Subject implements Serializable {
     
     public TBookUser(String userName, String passWord, String eMail){
         super(userName,passWord);
-      //  this.userName = userName;
         this.eMail = eMail;
-      //  this.passWord = passWord;
         addGroup(SubjectGroup.USER);
     }
     
     public TBookUser(String userName, String passWord, String eMail, String fName, String lName){
         super(userName,passWord);
-     //   this.userName = userName;
         this.eMail = eMail;
-     //   this.passWord = passWord;
         this.fName = fName;
         this.lName = lName;
         addGroup(SubjectGroup.USER);
@@ -41,17 +33,10 @@ public class TBookUser extends Subject implements Serializable {
         return getLogin();
     }
 
-  /*  public void setUserName(String userName) {
-        this.userName = userName;
-    }*/
 
     public String getPassWord() {
         return getPasswd();
     }
-/*
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }*/
 
     public String getfName() {
         return fName;

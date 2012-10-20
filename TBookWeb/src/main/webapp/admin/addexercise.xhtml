@@ -6,9 +6,9 @@
 
     <body>
 
-        <ui:composition template="./templateuser.xhtml">
+        <ui:composition template="./templateadmin.xhtml">
 
-            <ui:define name="top">   
+            <ui:define name="top">
 
             </ui:define>
 
@@ -26,56 +26,54 @@
                         <table border="0">
                             <tr>
                                 <td colspan="2" class="regText">
-                                    <h3>Settings</h3>
+                                    <h3>Add Exercise</h3>
                                 </td>
                                 <td>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="formLabel">
-                                    <h:outputLabel  for="txtPasswd">Password</h:outputLabel>
+                                    <h:outputLabel for="txtUName">Exercise Name</h:outputLabel>
                                 </td>
                                 <td>
-                                    <h:inputText class="formInput" id="txtPasswd" value="#{settings.passwd}" required="true"
+                                    <h:inputText class="formInput" id="txtUName" value="#{addexercise.ename}" required="true"
                                                  requiredMessage="Value is required"/>
-                                    <span class="message"><h:message for="txtPasswd" /></span>
+                                    <span class="message"><h:message for="txtUName" /></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="formLabel">
-                                    <h:outputLabel for="txtEmail">Email</h:outputLabel>
+                                    <h:outputLabel for="txtPicture">Exercise Picture</h:outputLabel>
                                 </td>
                                 <td>
-                                    <h:inputText class="formInput" id="txtEmail" value="#{settings.email}"  />
-                                    <span class="message"><h:message for="txtEmail" /></span>
+                                    <h:inputText class="formInput" id="txtPitcture" value="#{addexercise.picture}" required="true"
+                                                 requiredMessage="Value is required"/>
+                                    <span class="message"><h:message for="txtPicture" /></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="formLabel">
-                                    <h:outputLabel for="txtFName">First name</h:outputLabel>
+                                    <h:outputLabel for="txtDescription">Exercise Description</h:outputLabel>
                                 </td>
                                 <td>
-                                    <h:inputText class="formInput" id="txtFName" value="#{settings.fName}"  />
-                                    <span class="message"><h:message for="txtFName" /></span>
+                                    <h:inputText class="formInput" id="txtDescriptio" value="#{addexercise.description}" required="true"
+                                                 requiredMessage="Value is required"/>
+                                    <span class="message"><h:message for="txtDescription" /></span>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formLabel">
-                                    <h:outputLabel for="txtLName">Surname</h:outputLabel>
-                                </td>
-                                <td>
-                                    <h:inputText class="formInput" id="txtLName" value="#{settings.lName}"  />
-                                    <span class="message"><h:message for="txtLName" /></span>
+                                <td colspan="2" class="regText">
+                                    <h:commandButton value="Add" action="#{addexercise.action}" />
                                 </td>
                             </tr>
-                            <tr>
+                        </table>
+                    </h:form>
+                    <h:form>
+                        <tr>
                             <td colspan="2" class="regText">
-                            <h:commandButton value="Save" action="#{settings.action}" />
-                            </td>
-                            <td>
+                                <h:commandButton value="Cancel" action="#{addexercise.cancel}" />
                             </td>
                         </tr>
-                        </table>
                     </h:form>
                 </div>
             </ui:define>

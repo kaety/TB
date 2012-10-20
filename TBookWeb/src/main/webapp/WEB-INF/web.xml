@@ -14,7 +14,7 @@
      <error-page>
         <!-- Access denied (bad role response) -->
         <error-code>403</error-code>
-        <location>/loginfailed.xhtml</location>
+        <location>/403.xhtml</location>
     </error-page>
     
     <security-constraint>
