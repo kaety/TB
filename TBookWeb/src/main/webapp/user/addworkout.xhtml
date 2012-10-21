@@ -16,30 +16,30 @@
 
             <ui:define name="content">
                 <h:form>  
-                  
-    <p:growl id="msg" showDetail="true" escape="false" />  
-  
-    <h3 style="margin-top:0">Basic PickList</h3>  
-  
-    <p:pickList id="pickList" value="#{add.cities}" var="e"   
-                itemLabel="#{e}" itemValue="#{e}" />  
-    
-     <h:outputLabel for="name" value="name: *" />  
-            <p:inputText id="name"   
-                value="#{add.name}" required="true" label="name">  
-                <f:validateLength minimum="2" />  
-            </p:inputText>  
-  
-    <p:commandButton id="Submit" value="Submit" action="#{add.action}"  style="margin-top:5px"/>  
-  
-  
-   
-  
-</h:form>  
+
+                    <p:growl id="msg" showDetail="true" escape="false" />  
+
+                    <h3 style="margin-top:0">Add Workout</h3>  
+
+                    <p:pickList id="pickList" value="#{add.exercises}" var="e"   
+                                itemLabel="#{e}" itemValue="#{e}" />  
+
+                    <h:outputLabel for="name" value="name: *" />
+                    <p:inputText id="name"   
+                                 value="#{add.name}" required="true" label="name">  
+                        <f:validateLength minimum="2" />  
+                    </p:inputText>  
+                    <br/>
+                    <h3>DateTime</h3> 
+                    <p:calendar value="#{add.date}" pattern="MM/dd/yyyy HH:mm"/>
+                    <br/>
+                    <p:commandButton id="Submit" value="Submit" action="#{add.action}"  style="margin-top:5px"/>  
+
+
+                </h:form>  
             </ui:define>
 
         </ui:composition>
 
     </body>
 </html>
-                

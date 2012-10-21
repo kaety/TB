@@ -17,55 +17,56 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import org.primefaces.event.TransferEvent;  
+import java.util.Date;  
   
-import org.primefaces.model.DualListModel;  
+import org.primefaces.model.DualListModel; 
+   
+
 @Named("add")
 @RequestScoped  
 public class AddBB {  
     private IExerciseCatalogue exCat = TBook.INSTANCE.getExerciseCatalogue(); 
     private IUserCatalogue userCat = TBook.INSTANCE.getUserCatalogue();
     private IWorkoutCatalogue workCat = TBook.INSTANCE.getWorkoutCatalogue();
-    private DualListModel<String> cities;
+    private DualListModel<String> exercises;
     private String name="";
-
+    private Date date;
     
     FacesContext context = FacesContext.getCurrentInstance();
     HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
-  
-    public AddBB() {  
-          
-          
-        //Cities  
-        List<String> citiesSource = new ArrayList<String>();  
-        List<String> citiesTarget = new ArrayList<String>();  
+
+    public AddBB() {
+
+        List<String> exSource = new ArrayList<String>();
+        List<String> exTarget = new ArrayList<String>();
         List<Exercise> exes = exCat.getAll();
-        for(Exercise e :exes){
-            citiesSource.add(e.getEname());
-            
+        for (Exercise e : exes) {
+            exSource.add(e.getEname());
+
         }
-          
-          
-        cities = new DualListModel<String>(citiesSource, citiesTarget);  
-    }  
-      
-    public DualListModel<String> getCities() {  
-        return cities;    
-}  
-    public void setCities(DualListModel<String> cities) {  
-        this.cities = cities;  
-    }  
-    
+
+        exercises = new DualListModel<String>(exSource, exTarget);
+    }
+
+    public DualListModel<String> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(DualListModel<String> exercises) {
+        this.exercises = exercises;
+    }
+
     public String action() {
         List<Exercise> ex = new ArrayList<Exercise>();
-        List<String> extarget = cities.getTarget();
-        for (String e : extarget) {
+        List<String> etarget = exercises.getTarget();
+        for (String e : etarget) {
             ex.add(exCat.find(e));
         }
 
         workCat.add(new Workout(userCat.find(request.getRemoteUser()), ex,
                 name,
-                Calendar.getInstance().getTimeInMillis() + 1350551775));
-        name="";
+                date.getTime()));
+        name = "";
         return "index?faces-redirect=true";
 
     }
@@ -77,6 +78,16 @@ public class AddBB {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    
+    
 }
    
 

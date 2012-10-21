@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="3.875" errors="0" skipped="0" tests="3" name="edu.chl.tbok.TestTBook">
+<testsuite failures="0" time="3.386" errors="0" skipped="0" tests="3" name="edu.chl.tbok.TestTBook">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/nfs4/sol.ita.chalmers.se/ufs/misc/linuxsw/sup64/jdk-1.7.0_03/jre/lib/amd64"/>
@@ -59,7 +59,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="3.105" classname="edu.chl.tbok.TestTBook" name="testAddFindUser"/>
-  <testcase time="0.356" classname="edu.chl.tbok.TestTBook" name="testAddFindMessage"/>
-  <testcase time="0.385" classname="edu.chl.tbok.TestTBook" name="testAddFindExerciseAndWorkout"/>
+  <testcase time="2.696" classname="edu.chl.tbok.TestTBook" name="testAddFindUser"/>
+  <testcase time="0.316" classname="edu.chl.tbok.TestTBook" name="testAddFindMessage"/>
+  <testcase time="0.317" classname="edu.chl.tbok.TestTBook" name="testAddFindExerciseAndWorkout"/>
 </testsuite>
