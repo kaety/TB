@@ -21,24 +21,17 @@
   
     <h3 style="margin-top:0">Basic PickList</h3>  
   
-    <p:pickList id="pickList" value="#{pickListBean.cities}" var="city"   
-                itemLabel="#{city}" itemValue="#{city}" />  
+    <p:pickList id="pickList" value="#{add.cities}" var="e"   
+                itemLabel="#{e}" itemValue="#{e}" />  
+    
+     <h:outputLabel for="name" value="name: *" />  
+            <p:inputText id="name"   
+                value="#{add.name}" required="true" label="name">  
+                <f:validateLength minimum="2" />  
+            </p:inputText>  
   
-    <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="cityDialog.show()" style="margin-top:5px"/>  
+    <p:commandButton id="Submit" value="Submit" action="#{add.action}"  style="margin-top:5px"/>  
   
-    <p:dialog modal="true" showEffect="fade" hideEffect="fade" widgetVar="cityDialog">  
-        <h:panelGrid id="displayCities" columns="2">  
-            <h:outputText value="Source: " style="font-weight:bold"/>  
-                <ui:repeat value="#{pickListBean.cities.source}" var="item">  
-                <h:outputText value="#{item}" style="margin-right:5px" />  
-            </ui:repeat>  
-  
-            <h:outputText value="Target: " style="font-weight:bold"/>  
-            <ui:repeat value="#{pickListBean.cities.target}" var="item">  
-                <h:outputText value="#{item}" style="margin-right:5px" />  
-            </ui:repeat>  
-        </h:panelGrid>  
-    </p:dialog>  
   
    
   
