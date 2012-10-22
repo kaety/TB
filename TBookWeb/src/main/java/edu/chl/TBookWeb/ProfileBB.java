@@ -18,6 +18,7 @@ public class ProfileBB implements Serializable{
    
    
    private IUserCatalogue userCat = TBook.INSTANCE.getUserCatalogue(); 
+   private IWorkoutCatalogue workCat = TBook.INSTANCE.getWorkoutCatalogue();
    
    FacesContext context = FacesContext.getCurrentInstance();
    HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
@@ -41,8 +42,6 @@ public class ProfileBB implements Serializable{
     }
     
     public String getWon(){
-        
-        IWorkoutCatalogue workCat = TBook.INSTANCE.getWorkoutCatalogue();
          Workout wo = workCat.ownersNextWorkout(userCat.find(request.getRemoteUser()));
          if(wo== null){
              return "NO NEXT WORKOUT";
@@ -53,16 +52,13 @@ public class ProfileBB implements Serializable{
     }
     
    public List<Exercise> getExes(){
-         IWorkoutCatalogue workCat = TBook.INSTANCE.getWorkoutCatalogue();
         Workout wo = workCat.ownersNextWorkout(userCat.find(request.getRemoteUser()));
         if(wo== null){
              return null;
          }
          else{
             return wo.getEx();
-         }
-        
-        
+         }    
     }
    
 
